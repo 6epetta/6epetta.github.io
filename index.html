@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html>	
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="js.js"></script>
+<script src="moment.min.js"></script>
+<script src="daterangepicker.js"></script>
+<link rel="stylesheet" type="text/css" href="style.css">
+<link rel="stylesheet" type="text/css" href="button.css">
+<link rel="stylesheet" type="text/css" href="media.css">
+<link rel="stylesheet" type="text/css" href="daterangepicker.css">
+<title>SunnyGeorgia</title>	
+</head>
+<body>
+	<header class="container-fluid">
+		<div id="logo">
+			<img alt="logo" src="images/logo.png"/>
+		</div>
+				 	<input type="checkbox" id="btn-menu" />
+  					<label for="btn-menu"></label>
+				<nav>
+					<ol>
+						<li><a href="#">Главная</a></li>
+						<li><a id="ways" href="#">Направления</a></li>
+						<li><a href="#">Страховка</a></li>
+						<li><a href="#">Авиа</a></li>
+					</ol>		
+				</nav>
+			</div>
+	</header>
+		<div id="places" class="container">
+			<div class="row">
+				<div class="col-md-3 col-sm-6 col-xs-6">
+					<p class="category">
+						<a href="#">МОРЕ</a>
+					</p>
+					<p><a href="#">Анаклия</a></p>
+					<p><a href="#">Батуми</a></p>
+					<p><a href="#">Гонио</a></p>
+					<p><a href="#">Квариати</a></p>
+					<p><a href="#">Кобулеты</a></p>
+					<p><a href="#">Сарпи</a></p>
+					<p><a href="#">Уреки</a></p>
+				</div>
+
+				<div class="col-md-3 col-sm-6 col-xs-6">			
+					<p class="category">
+						<a href="#">ГОРЫ</a>
+					</p>
+					<p><a href="#">Бакуриани</a></p>
+					<p><a href="#">Боржоми</a></p>
+					<p><a href="#">Годерзи</a></p>
+					<p><a href="#">Гудаури</a></p>
+					<p><a href="#">Местиа</a></p>
+					<p><a href="#">Стефанцминда</a></p>
+					<p><a href="#">Ушгули</a></p>
+				</div>
+				
+
+				<div class="col-md-3 col-sm-6 col-xs-6">
+					<p class="category">
+						<a href="#">ГОРОДА</a>
+					</p>
+					<p><a href="#">Ахалцихе</a></p>
+					<p><a href="#">Зугдиди</a></p>
+					<p><a href="#">Кутаиси</a></p>
+					<p><a href="#">Мцхета</a></p>
+					<p><a href="#">Сигнаги</a></p>
+					<p><a href="#">Тбилиси</a></p>
+					<p><a href="#">Телави</a></p>
+
+				</div>
+
+				<div class="col-md-3 col-sm-6 col-xs-6">
+					<p class="category">
+						<a href="#">МЕСТА</a>
+					</p>
+					<p><a href="#">Мартвили</a></p>
+					<p><a href="#">Саирме</a></p>
+					<p><a href="#">Сурами</a></p>
+					<p><a href="#">Тушети</a></p>	
+					<p><a href="#">Цхалтубо</a></p>
+				</div>
+			</div>		
+		</div>	
+<div id="buttons" class="container">
+	<div class="row">
+			<button  id="home" class="col-sm-3 col-xs-3"><img alt="home" src="images/home.png"/> Жилье	</button>	
+			<button  id="tour" class="col-sm-3 col-xs-3"><img alt="tour" src="images/tour2.png"/> Туры	</button>	
+			<button  id="excurse" class="col-sm-3 col-xs-3"><img alt="excurse" src="images/excurse.png"/> Экскурсии	</button>	
+			<button  id="auto" class="col-sm-3 col-xs-3"><img alt="auto" src="images/auto.png"/> Авто	</button>	
+	</div>
+</div>
+
+	<div id="homes" class="container">
+		<div class="row">
+			<div class="col-sm-4 col-xs-12">
+					<img alt="calendar" src="images/calendar.png"/>
+						<input type="text" id="interval" value="" placeholder="ИНТЕРВАЛ ДАТ НАЧАЛА ТУРА"/>
+					<select id="calendar"></select>
+				<input type="date" class="form-control" id="date" name="date" placeholder="Дата" required>
+			</div>
+
+			<div class="col-sm-4 col-xs-12">
+						КОЛИЧЕСТВО ДНЕЙ
+				<select id="days" size="0">
+					<option></option>
+					<option>1-4 ДНЕЙ</option>
+					<option>5-9 ДНЕЙ</option>
+					<option>10+ ДНЕЙ</option>
+				</select>
+			</div>
+			<div class="col-sm-4 col-xs-12">
+				<div class="line">	
+					<p>
+						GEL&nbsp;<span>&nbsp;1&nbsp;&nbsp;</span>
+					</p>
+					<p id="line">
+						<input type="range" min="0" max="3000" value="10" step="1">
+					</p>
+					<p>
+						<span>3000</span>
+					</p>
+			  	</div>
+			</div>
+	</div>
+
+		<div class="container">
+			<button id="search">
+				<img alt="search" src="images/search.png"/> Расширенный поиск
+			</button>
+		</div>
+	<form class="container">
+		<div id="forms">
+				<div class="forms">
+								<p class="description">ТИП ТУРА</p>
+						
+								<div class="col-sm-6 col-xs-12">
+								<div class="control-group">
+								    <label class="control control-checkbox">
+								        ВСЕ
+								            <input type="checkbox" />
+								        <div class="control_indicator"></div>
+								    </label>
+								    <br>
+								    <label class="control control-checkbox">
+								        ПЛЯЖНЫЙ
+								            <input type="checkbox" />
+								        <div class="control_indicator"></div>
+								    </label>
+								    <br>
+								    <label class="control control-checkbox">
+								       	ГОРНО-ЛЫЖНЫЕ	
+								            <input type="checkbox" />
+								        <div class="control_indicator"></div>
+								    </label>
+								    <br>
+								    <label class="control control-checkbox">
+								        ЛЕЧЕБНЫЕ
+								            <input type="checkbox" />
+								        <div class="control_indicator"></div>
+								    </label>
+								    <br>
+								    <label class="control control-checkbox">
+								       	СВАДЕБНЫЕ	
+								            <input type="checkbox" />
+								        <div class="control_indicator"></div>
+								    </label>
+
+					</div>		
+						</div>
+							<div class="col-sm-6 col-xs-12">
+
+								<div class="control-group">
+								    <label class="control control-checkbox">
+								        ЭКСТРЕМАЛЬНЫЕ
+								            <input type="checkbox" />
+								        <div class="control_indicator"></div>
+								    </label>
+								    <br>
+								    <label class="control control-checkbox">
+								        ГАСТРОНОМИЧЕСКИЕ
+								            <input type="checkbox" />
+								        <div class="control_indicator"></div>
+								    </label>
+								    <br>
+								    <label class="control control-checkbox">
+								       	ЭКСКУРСИОННЫЕ	
+								            <input type="checkbox" />
+								        <div class="control_indicator"></div>
+								    </label>
+								    <br>
+								    <label class="control control-checkbox">
+								      ПАЛОМНИЧЕСКИЕ
+								            <input type="checkbox" />
+								        <div class="control_indicator"></div>
+								    </label>
+
+								</div>
+							</div>
+			</div>
+			
+			<div class="forms">
+				<p class="description">ПИТАНИЕ</p>
+					<div class="col-sm-6 col-xs-12">
+						<div class="control-group">
+								    <label class="control control-checkbox">
+								        НЕ ВКЛЮЧЕНО
+								            <input type="checkbox" />
+								        <div class="control_indicator"></div>
+								    </label>
+								    <br>
+								    <label class="control control-checkbox">
+								        ВВ - ТОЛЬКО ЗАВТРАК
+								            <input type="checkbox" />
+								        <div class="control_indicator"></div>
+								    </label>
+								    <br>
+								    <label class="control control-checkbox">
+								       	НВ - ЗАВТРАК И УЖИН	
+								            <input type="checkbox" />
+								        <div class="control_indicator"></div>
+								    </label>
+
+						</div>
+					</div>
+						<div class="col-sm-6 col-xs-12">
+							<div class="control-group">
+								    <label class="control control-checkbox">
+								        FB -  ПОЛНЫЙ ПАНСИОН
+								            <input type="checkbox" />
+								        <div class="control_indicator"></div>
+								    </label>
+								    <br>
+								    <label class="control control-checkbox">
+								        AI - ВСЕ ВКЛЮЧЕНО
+								            <input type="checkbox" />
+								        <div class="control_indicator"></div>
+								    </label>
+								    <br>
+								    <label class="control control-checkbox">
+								       	UAI - УЛЬТРА ВСЕ	
+								            <input type="checkbox" />
+								        <div class="control_indicator"></div>
+								    </label>
+
+							</div>
+						</div>
+			</div>
+		
+		</div>
+			<button id="chose">ПОДОБРАТЬ</button>
+	</form>
+</div>
+	<div id="tours" class="container">
+		<div id="carousel" class="carousel slide" data-ride="carousel">
+		  <div class="carousel-inner">
+		    <div class="item active">
+		      <img src="images/slide-1.jpg" alt="...">
+		    </div>
+		    <div class="item">
+		      <img src="images/slide-2.jpg" alt="...">
+		    </div>
+		    <div class="item">
+		      <img src="images/slide-3.jpg" alt="...">
+		    </div>
+		    <div class="item">
+		      <img src="images/slide-4.jpg" alt="...">
+		    </div>
+
+		  </div>
+		  <a class="left carousel-control" href="#carousel" role="button" data-slide="prev">
+		    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+		    <span class="sr-only">Предыдущий</span>
+		  </a>
+		  <a class="right carousel-control" href="#carousel" role="button" data-slide="next">
+		    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+		    <span class="sr-only">Следующий</span>
+		  </a>
+		</div>
+
+	</div>
+
+<div id="excurses" class="container">
+		<h2>Содержание 1</h2>
+</div>
+
+<div id="autos" class="container">
+		<h2>Содержание 2</h2>
+</div>
+<footer></footer>
+</body>
+</html>
